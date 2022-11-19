@@ -1,10 +1,10 @@
-def binary_search(array, needle):
+def binary_search(list, needle):
     low = 0
-    high = len(array) - 1
+    high = len(list) - 1
 
     while low <= high:
-        mid = (low + high)
-        guess = array[mid]
+        mid = (low + high) // 2
+        guess = list[mid]
 
         if guess == needle:
             return mid
@@ -16,7 +16,7 @@ def binary_search(array, needle):
     return None
 
 
-array = [1, 3, 5, 7, 9]
+list = [1, 3, 5, 7, 9]
 
-print(binary_search(array, 5))
-print(binary_search(array, -1))
+print(binary_search(list, 5))
+print(binary_search(list, -1))
